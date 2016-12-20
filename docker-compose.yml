@@ -10,9 +10,6 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: root
-            MYSQL_PASSWORD: root
-            MYSQL_DATABASE: localhost
 
     nginx:
         image: nginx:1.10.2
