@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+    mysql:
+        image: mysql:5.7
+        ports:
+            - 3306:3306
+        volumes:
+            - /var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_DATABASE: localhost
+
+    nginx:
+        image: nginx:1.10.2
+        ports:
+            - 80:80
+        restart: always
+        volumes:
+            - ./nginx/conf:/etc/nginx/conf.d
+            - ~/Projects:/code
+        links:
+            - php
+        depends_on:
+            - php
+
+    php:
+        build: php
+        expose:
+            - 9000
+        restart: always
+        volumes:
+            - ./php/conf/php.ini:/usr/local/etc/php/conf.d/custom.ini
+            - ~/Projects:/code
+        links:
+            - mysql
