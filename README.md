@@ -10,7 +10,7 @@ Basic docker box for little projects & tests. I base most of my docker boxes on 
 
 ## Services
 
-- PHP 7
+- PHP-FPM 7.1
 - MySQL 5.7
 - NGINX 1.10
 
