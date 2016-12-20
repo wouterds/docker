@@ -2,6 +2,7 @@ FROM php:7.0-fpm
 
 RUN apt-get update
 
+# Some basic extensions
 RUN docker-php-ext-install -j$(nproc) json mbstring opcache pdo pdo_mysql mysqli
 
 # Curl
