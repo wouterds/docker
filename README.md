@@ -10,8 +10,8 @@ It comes with the following services:
 
 ##  Requirements
 
-- Docker installed
-- Docker Compose installed
+- [Docker](!https://docs.docker.com/engine/installation/) installed
+- [Docker Compose](!https://docs.docker.com/compose/install/) installed
 
 ## Installation / run
 
