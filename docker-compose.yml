@@ -28,7 +28,7 @@ services:
             - php
 
     php:
-        image: php:7.1-fpm
+        build: php
         expose:
             - 9000
         restart: always
