@@ -30,7 +30,7 @@ services:
     php:
         build: php
         expose:
-            - 9000
+            - 9000:9000
         restart: always
         volumes:
             - ./php/conf/php.ini:/usr/local/etc/php/conf.d/custom.ini
