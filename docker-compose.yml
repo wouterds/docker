@@ -33,7 +33,7 @@ services:
             - 9000
         restart: always
         volumes:
-            - ./php/conf/php.ini:/usr/local/etc/php/conf.d/custom.ini
+            - ./php/php.ini:/usr/local/etc/php/conf.d/custom.ini
             - ~/Projects:/code
         links:
             - mysql
