@@ -20,9 +20,9 @@ services:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
             - ~/Projects:/code
 
-    php:
-        build: php
+    php-fpm:
+        build: php-fpm
         restart: on-failure
         volumes:
-            - ./php/php.ini:/usr/local/etc/php/conf.d/custom.ini
+            - ./php-fpm/php.ini:/usr/local/etc/php/conf.d/custom.ini
             - ~/Projects:/code
