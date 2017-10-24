@@ -12,7 +12,7 @@ Basic docker box for little projects & tests. I base most of my docker boxes on 
 
 - PHP-FPM 7.1
 - MySQL 5.7
-- NGINX 1.10
+- NGINX 1.13
 
 ## Accessing services
 

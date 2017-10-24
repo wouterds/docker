@@ -15,7 +15,7 @@ services:
             MYSQL_DATABASE: docker
 
     nginx:
-        image: nginx:1.10.2
+        image: nginx:1.13
         ports:
             - '80:80'
         restart: on_failure
