@@ -22,10 +22,6 @@ services:
         volumes:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
             - ~/Projects:/code
-        links:
-            - php
-        depends_on:
-            - php
 
     php:
         build: php
@@ -35,5 +31,3 @@ services:
         volumes:
             - ./php/php.ini:/usr/local/etc/php/conf.d/custom.ini
             - ~/Projects:/code
-        links:
-            - mysql
