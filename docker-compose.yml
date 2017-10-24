@@ -8,11 +8,8 @@ services:
         volumes:
             - /var/lib/mysql
         restart: on_failure
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: docker
-            MYSQL_PASSWORD: docker
-            MYSQL_DATABASE: docker
+        env_file:
+            - docker.env
 
     nginx:
         image: nginx:1.13
