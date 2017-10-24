@@ -6,7 +6,7 @@ services:
         ports:
             - '3306:3306'
         volumes:
-            - /var/lib/mysql
+            - ./data/mysql:/var/lib/mysql
         restart: on-failure
         env_file:
             - docker.env
