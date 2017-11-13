@@ -1,5 +1,5 @@
 FROM php:7.1-fpm
-MAINTAINER Wouter De Schuyter <wouter.de.schuyter@gmail.com>
+LABEL maintainer="Wouter De Schuyter <wouter.de.schuyter@gmail.com>"
 
 RUN apt-get update
 
