@@ -1,19 +1,15 @@
 FROM php:7.1-fpm
 LABEL maintainer="Wouter De Schuyter <wouter.de.schuyter@gmail.com>"
 
-RUN apt-get update
-
 # Some basic extensions
-RUN docker-php-ext-install -j$(nproc) json mbstring opcache pdo pdo_mysql mysqli
-
 # Curl
-RUN apt-get install -y libcurl4-openssl-dev
-RUN docker-php-ext-install -j$(nproc) curl
-
 # GD
-RUN apt-get install -y libpng-dev libjpeg-dev
-RUN docker-php-ext-install -j$(nproc) gd
-
 # Intl
-RUN apt-get install -y libicu-dev
-RUN docker-php-ext-install -j$(nproc) intl
+RUN apt-get update && \
+    docker-php-ext-install -j$(nproc) json mbstring opcache pdo pdo_mysql mysqli && \
+    apt-get install -y libcurl4-openssl-dev && \
+    docker-php-ext-install -j$(nproc) curl && \
+    apt-get install -y libpng-dev libjpeg-dev && \
+    docker-php-ext-install -j$(nproc) gd && \
+    apt-get install -y libicu-dev && \
+    docker-php-ext-install -j$(nproc) intl
