@@ -1,12 +1,12 @@
-# Basic Docker Web Dev Box
+# Basic Docker web development environment
 
-Basic docker box for little projects & tests. I base most of my docker boxes on this one.
+A few basic docker containers for little projects & tests.
 
 ##  Requirements
 
-- This repo assumes you store your projects in  `~/Projects`.
-- [Docker](https://docs.docker.com/engine/installation/) installed
-- [Docker Compose](https://docs.docker.com/compose/install/) installed
+- This repo assumes you store your projects in  `~/Projects`
+- [Docker](https://docs.docker.com/engine/installation/) is installed
+- [Docker Compose](https://docs.docker.com/compose/install/) is installed
 
 ## Services
 
