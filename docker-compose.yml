@@ -12,7 +12,7 @@ services:
             - docker.env
 
     nginx:
-        image: nginx:1.13
+        image: nginx:1.15
         ports:
             - '80:80'
         restart: on-failure
