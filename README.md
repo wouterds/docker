@@ -10,7 +10,7 @@ A few basic docker containers for little projects & tests.
 
 ## Services
 
-- PHP-FPM 7.1
+- PHP-FPM 7.3
 - MySQL 5.7
 - NGINX 1.13
 

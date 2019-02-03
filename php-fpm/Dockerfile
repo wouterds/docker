@@ -1,4 +1,4 @@
-FROM php:7.1-fpm
+FROM php:7.3-fpm
 LABEL maintainer="Wouter De Schuyter <wouter.de.schuyter@gmail.com>"
 
 RUN apt-get update
