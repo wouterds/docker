@@ -1,7 +1,6 @@
 FROM php:7.3-fpm
 LABEL maintainer="Wouter De Schuyter <wouter.de.schuyter@gmail.com>"
 
-
 RUN apt-get update && \
   # Some basic extensions
   docker-php-ext-install -j$(nproc) json mbstring opcache pdo pdo_mysql mysqli && \
