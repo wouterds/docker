@@ -1,28 +1,28 @@
 version: '2'
 
 services:
-    mysql:
-        image: mysql:5.7
-        ports:
-            - '3306:3306'
-        volumes:
-            - ./data/mysql:/var/lib/mysql
-        restart: on-failure
-        env_file:
-            - docker.env
+  mysql:
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    restart: on-failure
+    env_file:
+      - docker.env
 
-    nginx:
-        image: nginx:1.15
-        ports:
-            - '80:80'
-        restart: on-failure
-        volumes:
-            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-            - ~/Projects:/code
+  nginx:
+    image: nginx:1.15
+    ports:
+      - '80:80'
+    restart: on-failure
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ~/Projects:/code
 
-    php-fpm:
-        build: php-fpm
-        restart: on-failure
-        volumes:
-            - ./php-fpm/php.ini:/usr/local/etc/php/conf.d/custom.ini
-            - ~/Projects:/code
+  php-fpm:
+    build: php-fpm
+    restart: on-failure
+    volumes:
+      - ./php-fpm/php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ~/Projects:/code
